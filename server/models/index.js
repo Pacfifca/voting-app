@@ -8,11 +8,11 @@ if (process.env.DATABASE_URL) {
     dialect: 'postgres',
     logging: false,
     dialectOptions: {
-      ssl: 
-        process.env.DATABASE_URL.includes('sslmode=require')
-        ? { require: true, rejectUnauthorized: false }
-        : false,
+      ssl:{
+        equire: true,
+        rejectUnauthorized: false,
       },
+    },
   });
 }else{
   sequelize=new Sequelize(
