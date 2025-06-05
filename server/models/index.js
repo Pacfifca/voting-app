@@ -12,8 +12,8 @@ if (process.env.DATABASE_URL) {
       ssl: {
         require: true,         
         rejectUnauthorized: false
-      }
-    }
+      },
+    },
   });
 }else{
   sequelize=new Sequelize(
